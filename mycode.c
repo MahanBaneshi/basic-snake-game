@@ -1,3 +1,4 @@
+// writed by Mahan Baneshi
 #include <stdio.h>
 #include <time.h>
 #include <stdlib.h>
@@ -15,7 +16,7 @@
 #define snake2_body '8'
 #define Bomb 'B'
 
-// برای ماری که با کلید های جهت حرکت می کند
+// For the snake that moves with the arrow keys
 
 typedef enum {
     up = 72,
@@ -38,9 +39,9 @@ struct point{
 };
 
 struct point player1, player2, fruit, bomb;
-struct point body1[400], body2[400]; // بدنه ی مار ها
+struct point body1[400], body2[400]; // Snakes' bodies
 
-int n_body1=0, n_body2=0; //طول بدنه مار ها
+int n_body1=0, n_body2=0; // Body length of snakes
 
 void hidecursor() { // hide mouse cruser
     HANDLE consoleHandle = GetStdHandle(STD_OUTPUT_HANDLE);
